@@ -6,10 +6,10 @@ This repository contains a simple command‑line application that demonstrates h
 
 The CLI performs the following actions via Tatum’s API:
 
-1. **Generate a new wallet** (mnemonic & extended public key) – calls the `GET /v3/ethereum/wallet` endpoint to return a mnemonic phrase and XPUB. Tatum’s documentation describes this as the starting point for creating deterministic wallets【677212479710607†L503-L511】.
-2. **Derive a private key** from a mnemonic and index – calls `POST /v3/ethereum/wallet/priv` to derive a private key for a given child address【677212479710607†L533-L541】.
-3. **Derive an address** from an XPUB and index – calls `GET /v3/ethereum/address/{xpub}/{index}` to generate a public address without exposing private data【677212479710607†L563-L569】.
-4. **Check the balance** of any Ethereum address – calls `GET /v3/ethereum/account/balance/{address}` and returns the balance in ETH【677212479710607†L595-L600】.
+1. **Generate a new wallet** (mnemonic & extended public key) – calls the `GET /v3/ethereum/wallet` endpoint to return a mnemonic phrase and XPUB. Tatum’s documentation describes this as the starting point for creating deterministic wallets.
+2. **Derive a private key** from a mnemonic and index – calls `POST /v3/ethereum/wallet/priv` to derive a private key for a given child address.
+3. **Derive an address** from an XPUB and index – calls `GET /v3/ethereum/address/{xpub}/{index}` to generate a public address without exposing private data.
+4. **Check the balance** of any Ethereum address – calls `GET /v3/ethereum/account/balance/{address}` and returns the balance in ETH.
 
 Each of these functions corresponds directly to the examples provided in Tatum’s “Getting started with Ethereum REST API” guide, implemented in JavaScript using `axios`.
 
@@ -62,13 +62,13 @@ Solutions Engineers at Tatum are expected to bridge the gap between sales and en
 * Build tooling that can be easily adapted for different blockchains.
 * Provide clear instructions and error handling for non‑experts.
 
-By following Tatum’s official examples【677212479710607†L503-L511】【677212479710607†L533-L541】【677212479710607†L563-L569】 and translating them into an interactive JavaScript application, this repo showcases both technical fluency and a focus on developer experience.
+By following Tatum’s official examples and translating them into an interactive JavaScript application, this repo showcases both technical fluency and a focus on developer experience.
 
 ## Next steps
 
 To extend this demo, consider adding:
 
-* **Transaction sending** – estimate gas and send testnet transactions to other addresses. Tatum provides endpoints for gas estimation and transaction submission in the same guide【677212479710607†L607-L640】.
+* **Transaction sending** – estimate gas and send testnet transactions to other addresses. Tatum provides endpoints for gas estimation and transaction submission in the same guide.
 * **Support for additional chains** – allow the user to choose between Ethereum, Polygon, Bitcoin and other blockchains at runtime.
 * **Web interface** – wrap the functionality in a simple web UI using React or Express to showcase full‑stack capabilities.
 
